@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Challanges</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+"use strict"
+
+
+var nums = [10, -12, 7, -4, 0, -33, 40];
+function sumMn(arr){
+  return arr.reduce((acc, ele) => {
+    return {
+      plus: ele > 0 ? acc.plus + ele : acc.plus,
+      minus: ele < 0 ? acc.minus + ele : acc.minus
+    }
+  }, {plus: 0, minus: 0});
+}
+console.log(sumMn(nums));
+
+
+
+
+
+
+// var nums = {
+//   a: 10,
+//   b: 20,
+//   c: "string",
+//   d: 12
+// }
+
+// function sumObValue(obj){
+//   var total = 0;
+//   for(let k in obj){
+//     console.log(k);
+//     if(typeof obj[k] === 'number') total += obj[k];
+//   }
+//   return total;
+// }
+
+// console.log(sumObValue(nums));
+
+
+
+
+
+
+// function Fruit(title, price){
+//   this.title = title;
+//   this.price = price;
+// }
+
+// function Fruit(title, price){
+//   this.title = title;
+//   this.price = price;
+// }
+
+// class Fruit{
+//   constructor(title, price){
+//     this.title = title;
+//     this.price = price;
+//   }
+//   priceInfo(){
+//   return `Price of ${this.title} is ${this.price}`
+// }
+// }
+
+// // Fruit.prototype.priceInfo = function(){
+// //   return `Price of ${this.title} is ${this.price}`
+// // }
+
+// var Apple = new Fruit("Apple", 2);
+// console.log(Apple.priceInfo());
+
+// var Orange = new Fruit("Orange", 3);
+// console.log(Orange.priceInfo());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var greeting = (()=>{
+//   var gString = " Hey this is ";
+  
+//   function greet(name){
+//     return  `${gString} ${name}`;
+//   }
+  
+//   function changeGreeting(newGreeting){
+//     gString = newGreeting;
+//   }
+  
+//   return {
+//     greet,
+//     changeGreeting
+//   }
+  
+// })();
+
+
+// console.log(greeting.greet("Bob"));
+// console.log(greeting.changeGreeting("Good Morning"));
+// console.log(greeting.greet("Emily"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var vCount = 0;
+// var vouel = ["a", "e", "i", "o", "u"];
+
+// var str = "Today is best day of my life";
+
+// // for(let i = 0; i < str.length; i++){
+// //   vouel.indexOf(str[i]) !== -1 ? vCount++ : vCount;
+// // }
+
+// for(let s of str){
+//   vouel.includes(s) ? vCount++ : vCount;
+// }
+
+// console.log(vCount);
+
+
+
+
+
+
+
+
+// var person1 = {
+//   name: "Emran",
+//   info: {
+//     country: "Bangladesh",
+//     age: 25
+//   },
+//   posts: 129
+// };
+
+// var person2 = {
+//   name: "Eram Taohid",
+//   info: {
+//     country: "Canada",
+//     age: 15
+//   }
+// }
+
+// function sortPerson({name: n, info: {country: c}, posts:p=0}){
+//   var person = {n, c, p};
+//   return person;
+// }
+
+// console.log(sortPerson(person1));
+// console.log(sortPerson(person2));
+
+
+
+
+
+
+
+
+
+
+
+
+// var cars = [
+//     {brand: "Hundai", price: 1223335},
+//     {brand: "Toyota", price: 48498498}
+//   ];
+  
+//   function carInfo({brand, price}){
+//     var s;
+//     price <=2000000 ? s = "only" : s = "Expensiv";
+//     return `Price of my new ${brand} is ${price} ${s}`
+//   }
+  
+//   cars.forEach(car => console.log(carInfo(car)));
+
+
+
+
+
+
+
+
+
+// var a = [1,2,3,4];
+
+// var b;
+
+// b = [...a];
+
+// b.push("newItem");
+
+// console.log(a);
+// console.log(b);
+
+
+
+
+
+
+
+
+
+
+
+// var a,b,c,d,arr;
+
+// a = [1,2];
+// b = [3,4];
+// c = [5,6,7];
+// d= 8;
+
+// arr = [...a, ...b,...c,d];
+
+// console.log(arr);
+
+
+
+
+// var a,b,c;
+
+// var arr = [1,2,3,4,5,6,7];
+
+// [a, b, ...c] = arr;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+
+
+
+
+// var obj = {
+//   x: 3,
+//   y: 27,
+//   z: 30
+// }
+
+// function sum({ x, y, z}){
+
+//   return x + y + z; 
+// }
+
+// console.log(sum(obj));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function squire(a){
+//   return a * a;
+// }
+
+// console.log(squire(9));
+// console.log(squire());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function multiBy(a = 5, mult = 3){
+//   // mult = mult !== undefined ? mult : 2;
+//   console.log( a * mult);
+// }
+// multiBy();
+// multiBy(2);
+// multiBy(2, undefined);
+// multiBy(2, null);
+// multiBy(2, 0);
+// multiBy(2, 10);
+
+
+
+
+
+
+
+
+
+
+
+
+// var multi = (a, b) =>  a * b;
+
+
+// // console.log(multi(10, 6));
+
+// setTimeout(() => 
+//   console.log(multi(10, 5))
+// , 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function isNumber(a){
+  
+//   return typeof a === "number" ? "This is a Number" : "This is not a Number";
+  
+//   // if(typeof a === "number"){
+//   //   return "This is a Number";
+//   // }else{
+//   //   return "This is not a Number";
+//   // }
+  
+  
+// }
+
+// console.log(isNumber(1));
+// console.log(isNumber("Hi there"));
+// console.log(isNumber(true));
+
+
+
+
+
+
+
+
+
+
+
+// var a = 5,
+//     b = 10;
+    
+// if( b > a ){
+//   var c = 2;
+//   c = a + b + c;
+//   console.log(c);
+// }
+// console.log(c);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var i = 10;
+
+// for( let i = 0; i < 5; i++){
+  
+// }
+
+// console.log(i);
+
+
+
+
+
+
+
+
+
+
+
+
+// var arr = [1, 2];
+// arr.push(3);
+
+// console.log(arr);
+
+// arr = [1,2];
+// console.log(arr);
+
+
+
+
+
+// var a = "First";
+// var b = "Second";
+
+// [b, a] = [a, b];
+
+// console.log(a, b);
+
+
+
+
+
+// function sum(...argss){
+//   let total;
+  
+//   total = argss.reduce((prev, next)=> prev + next, 0);
+  
+//   console.log(total);
+  
+// }
+
+// sum(5, 10, 355465778);
+
+    </script>
+</body>
+</html>
